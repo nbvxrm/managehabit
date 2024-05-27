@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e1e; /* Темный фон */
+    color: #fff; /* Белый текст */
+    height: 100vh;
+    overflow-y: scroll; /* Добавим прокрутку, если содержимое не помещается */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #2d2d2d; /* Темный фон контейнера */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendars {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Два столбца */
+    gap: 20px; /* Расстояние между календарями */
+}
+
+.calendar {
+    background: #3e3e3e; /* Темный фон календаря */
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.days, .dates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.days {
+    justify-content: space-evenly;
+}
+
+.day, .day-name {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Закругленные кружки */
+    background: #555;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 2px;
+}
+
+.day-name {
+    background: transparent;
+    cursor: default;
+    font-weight: bold;
+}
+
+.day.checked {
+    background: #0078d4; /* Синий цвет как в Windows 10 */
+    color: white;
+}
+
+.day.missed {
+    background: red;
+    color: white;
+}

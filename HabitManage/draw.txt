@@ -1,0 +1,2 @@
+    <link rel="stylesheet" href="css/design.css">
+    <script src="javascript/java.js"></script>
